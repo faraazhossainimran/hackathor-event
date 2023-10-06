@@ -1,13 +1,14 @@
 import React from 'react'
-import NavBar from '../../Shared/NavBar/NavBar'
 import Banner from '../../components/Banner/Banner'
 import Services from '../../components/Services/Services'
+import { useLoaderData } from 'react-router-dom'
 
 const Home = () => {
+    const data = useLoaderData()
     return (
         <div>
             <Banner></Banner>
-            <Services></Services>
+            <Services data={data}></Services>
         </div>
     )
 }
