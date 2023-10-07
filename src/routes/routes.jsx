@@ -8,10 +8,13 @@ import Prizes from "../pages/Prizes/Prizes";
 import Hackathons from "../pages/Hackathons/Hackathons";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
+import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 const router = createBrowserRouter([
     {
       path: "/",
       element: <Root></Root>,
+      errorElement: <ErrorPage></ErrorPage>,
       children: [
         {
             path: "/", 
@@ -37,6 +40,11 @@ const router = createBrowserRouter([
         {
             path: "/register", 
             element: <Register></Register>
+        },
+        {
+            path: "/service-details/:id", 
+            element: <ServiceDetails></ServiceDetails>,
+            loader: () => fetch('../services.json')
         },
       ]
     },

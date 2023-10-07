@@ -38,18 +38,18 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div><Link className="normal-case text-xl" to={"/"}>Hackathon Event</Link></div>
+          <div><Link className="normal-case text-2xl" to={"/"}>Hackathon Event</Link></div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link to={"/prizes"}>Prizes</Link>
+              <Link className="text-xl" to={"/prizes"}>Prizes</Link>
             </li>
             <li>
-              <Link to={"/about"}>About Us</Link>
+              <Link className="text-xl" to={"/about"}>About Us</Link>
             </li>
             <li>
-              <Link to={"/hackathons"}>Hackathons</Link>
+              <Link className="text-xl" to={"/hackathons"}>Hackathons</Link>
             </li>
           </ul>
         </div>

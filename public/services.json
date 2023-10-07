@@ -1,38 +1,44 @@
 [
     {
         "id": 1,
+        "image": "https://images.unsplash.com/photo-1560264280-88b68371db39?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "title": "Venue",
         "description": "Our state-of-the-art venue offers a comfortable and productive environment for participants. It features spacious workstations, ergonomic seating, high-speed Wi-Fi, and an inspiring atmosphere to fuel your creativity.",
         "details": "Our venue is designed to accommodate participants comfortably throughout the hackathon. We have dedicated areas for teams to collaborate and relax. In addition to workspaces, we provide breakout rooms for brainstorming sessions and quiet corners for focused work. Our venue is equipped with the latest technology to support your projects, including presentation facilities for final demos."
     },
     {
         "id": 2,
+        "image": "https://images.unsplash.com/photo-1523582407565-efee5cf4a353?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "title": "Mentors and Experts",
         "description": "Gain invaluable insights from industry veterans and domain experts. Our mentors bring a wealth of experience in software development, design, and entrepreneurship to guide you through every step of your hackathon journey.",
         "details": "Our team of mentors and experts is available to help you overcome technical challenges, refine your ideas, and make the most of your hackathon experience. Whether you're a novice coder or an experienced developer, our mentors offer one-on-one assistance, code reviews, and strategic advice. They'll help you transform your concepts into polished projects and address any roadblocks along the way."
     },
     {
         "id": 3,
+        "image": "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "title": "Workshops and Tutorials",
         "description": "Expand your skill set with hands-on workshops and interactive tutorials. Our lineup of sessions covers a wide range of topics, from emerging technologies to design thinking and project management.",
         "details": "We offer a variety of workshops and tutorials on topics relevant to hackathon projects. These sessions are open to all participants and are a great way to expand your knowledge. Dive into deep learning, explore the Internet of Things, or sharpen your UI/UX design skills. Our experts will lead you through practical exercises and provide resources to apply what you've learned to your projects."
     },
     {
         "id": 4,
+        "image": "https://images.unsplash.com/photo-1519671282429-b44660ead0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "title": "Food and Beverages",
         "description": "Stay fueled and focused with complimentary meals, snacks, and a variety of beverages. We cater to diverse dietary preferences and ensure that you have the sustenance you need to keep your creativity flowing.",
         "details": "We provide breakfast, lunch, dinner, and snacks to keep you fueled throughout the event. Special dietary options are available upon request. Enjoy a diverse menu, from energizing breakfast burritos to gourmet dinner options. Hydration is important, so we offer a selection of beverages, including coffee, tea, and refreshing juices."
     },
     {
         "id": 5,
+        "image": "https://images.unsplash.com/photo-1561489413-985b06da5bee?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "title": "Networking Opportunities",
         "description": "Forge connections that last a lifetime. Hackathons are not just about code; they're about building lasting relationships in the tech community. Connect with fellow participants, mentors, sponsors, and potential collaborators.",
         "details": "Hackathons are a unique opportunity to connect with like-minded individuals in the tech industry. Whether you're looking for a co-founder for your startup idea or seeking career advice from seasoned professionals, our networking events and social gatherings are designed to help you build valuable connections. Share ideas, swap contact information, and explore potential collaborations during our networking sessions."
     },
     {
         "id": 6,
+        "image": "https://images.unsplash.com/photo-1578269174936-2709b6aeb913?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80",
         "title": "Prizes and Recognition",
-        "description": "Compete for prestigious prizes and gain well-deserved recognition for your innovative projects. It's not just about winning; it's about showcasing your talents to the world.",
+        "description": "Compete for prestigious prizes and gain well-deserved recognition for your innovative projects. It's not just about winning; it's about showcasing your talents to the world. It is very productive event",
         "details": "Winning teams will receive cash prizes and recognition, but it's not just about the competition. Every project deserves its moment in the spotlight. Present your work to a panel of esteemed judges and receive valuable feedback. Showcase your innovation to potential employers, investors, and the tech community. It's your chance to shine and take your projects to the next level."
     }
 ]
