@@ -10,6 +10,7 @@ import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
+import PrivateRoute from "./PrivateRoute";
 const router = createBrowserRouter([
     {
       path: "/",
@@ -27,11 +28,11 @@ const router = createBrowserRouter([
         }, 
         {
             path: "/prizes", 
-            element: <Prizes></Prizes>
+            element: <PrivateRoute><Prizes></Prizes></PrivateRoute>
         },
         {
             path: "/hackathons", 
-            element: <Hackathons></Hackathons>
+            element: <PrivateRoute><Hackathons></Hackathons></PrivateRoute>
         },
         {
             path: "/register", 
