@@ -9,7 +9,7 @@ const ServiceDetailPage = ({ find }) => {
   return (
     <div className="">
       <div
-        className="hero h-[500px]"
+        className="hero h-[600px]"
         style={{
           backgroundImage:
             `url(${image})`,

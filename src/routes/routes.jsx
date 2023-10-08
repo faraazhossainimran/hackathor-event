@@ -34,12 +34,12 @@ const router = createBrowserRouter([
             element: <Hackathons></Hackathons>
         },
         {
-            path: "/login", 
-            element: <Login></Login>
-        },
-        {
             path: "/register", 
             element: <Register></Register>
+        },
+        {
+            path: "/login", 
+            element: <Login></Login>
         },
         {
             path: "/service-details/:id", 

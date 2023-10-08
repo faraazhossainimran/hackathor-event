@@ -38,7 +38,7 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div><Link className="normal-case text-2xl" to={"/"}>Hackathon Event</Link></div>
+          <div><Link className="normal-case text-2xl font-bold" to={"/"}>Hackathon Event</Link></div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
