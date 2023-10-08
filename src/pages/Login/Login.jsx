@@ -3,7 +3,21 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const Login = () => {
-  const { user,googleSignIn } = useContext(AuthContext);
+  const { user, signIn, googleSignIn } = useContext(AuthContext);
+  const handleSignIn = (e) => {
+    e.preventDefault()
+    const form = new FormData(e.currentTarget)
+    const email = form.get('email')
+    const password = form.get('password')
+    console.log(email, password);
+    signIn(email,password)
+    .then(result=> {
+        console.log(result.user);
+    })
+    .catch(error=>{
+        console.log(error);
+    })
+  }
   const handleGoogleLogin = () => {
     googleSignIn()
     .then(result=> {
@@ -17,17 +31,18 @@ const Login = () => {
   return (
     <div>
       <div className="hero">
-        <div className="py-8">
-          <h1 className="text-5xl text-center my-8 font-bold">Login now!</h1>
+        <div className="md:py-8">
+          <h1 className="text-2xl md:text-5xl text-center my-8 font-bold">Login now!</h1>
           <p>{user&& <span>user logged in</span>}</p>
-          <div className="card w-[400px] shadow-2xl">
-            <form className="card-body">
+          <div className="card md:w-[400px] shadow-2xl">
+            <form onSubmit={handleSignIn} className="card-body">
               <div className="form-control">
                 <label className="label">
                   <span className="label-text">Email</span>
                 </label>
                 <input
                   type="email"
+                  name="email"
                   placeholder="email"
                   className="input input-bordered"
                   required
@@ -39,6 +54,7 @@ const Login = () => {
                 </label>
                 <input
                   type="password"
+                  name="password"
                   placeholder="password"
                   className="input input-bordered"
                   required
@@ -56,7 +72,7 @@ const Login = () => {
                 </label>
               </div>
               <div className="form-control mt-6">
-                <button className="btn btn-primary">Login</button>
+                <button type="onSubmit" className="btn btn-primary">Login</button>
               </div>
             </form>
             <div className="divider mx-8">OR</div>

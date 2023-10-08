@@ -33,11 +33,11 @@ const Register = () => {
   return (
     <div>
       <div className="hero">
-        <div className="py-8">
-          <h1 className="text-5xl text-center my-8 font-bold">
+        <div className="md:py-8">
+          <h1 className=" text-2xl md:text-5xl text-center my-8 font-bold">
             Register Account 
           </h1>
-          <div className="card w-[400px] shadow-2xl">
+          <div className="card md:w-[400px] shadow-2xl">
             <form onSubmit={handleCreateAcount} className="card-body">
               <div className="form-control">
                 <label className="label">

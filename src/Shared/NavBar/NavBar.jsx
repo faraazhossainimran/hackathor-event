@@ -4,20 +4,22 @@ import { AuthContext } from "../../providers/AuthProviders";
 
 const NavBar = () => {
   const { user, logOut } = useContext(AuthContext);
-  const navigate = useNavigate()
+  const defaultImage =
+    "https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1966&q=80";
+  const navigate = useNavigate();
   const handleSignOut = () => {
     logOut()
-    .then(() => {
-        navigate('/')
-    })
-    .catch(error => {
+      .then(() => {
+        navigate("/");
+      })
+      .catch((error) => {
         console.log(error);
-    })
-  }
+      });
+  };
   return (
     <div className="container mx-auto">
       <div className="navbar bg-base-100">
-        <div className="navbar-start">
+        <div className="w-[80%]">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
               <svg
@@ -50,8 +52,11 @@ const NavBar = () => {
               </li>
             </ul>
           </div>
-          <div>
-            <Link className="normal-case text-2xl font-bold" to={"/"}>
+          <div className="">
+            <Link
+              className="text-md md:text-2xl font-bold"
+              to={"/"}
+            >
               Hackathon Event
             </Link>
           </div>
@@ -78,35 +83,28 @@ const NavBar = () => {
         <div className="navbar-end">
           {user ? (
             <div>
-            <div className="navbar bg-base-100">
-              <div className="flex-none gap-2">
-                <div className="dropdown dropdown-end">
-                  <label
-                    tabIndex={0}
-                    className="btn btn-ghost btn-circle avatar"
-                  >
-                    <div className="w-10 rounded-full">
-                      <img
-                        src={"https://images.unsplash.com/photo-1499996860823-5214fcc65f8f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1966&q=80"}
-                      />
-                    </div>
-                  </label>
-                  <ul
-                    tabIndex={0}
-                    className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-secondary rounded-box w-52"
-                  >
-                    <li>
-                      <button onClick={handleSignOut}>
-                        <Link className="text-white text-lg font-semibold" to={"/register"}>
-                          Logout
-                        </Link>
-                      </button>
-                    </li>
-                  </ul>
+              <div className="">
+                <div className="flex flex-cols">
+                  {user && user.displayName ? (
+                    <p className="mt-2 hidden sm:block">{user.displayName}</p>
+                  ) : (
+                    <p className="mt-2 hidden sm:block">UserName</p>
+                  )}
+                  <div className="dropdown ">
+                    <label tabIndex={0} className="avatar ">
+                      <div className="w-10 ml-4 rounded-full">
+                        <img
+                          className=""
+                          src={
+                            user & user.photoURL ? user.photoURL : defaultImage
+                          }
+                        />
+                      </div>
+                    </label>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
           ) : (
             <Link className="btn btn-primary" to={"/login"}>
               Login
@@ -115,6 +113,15 @@ const NavBar = () => {
 
           {/* <button className="">Login</button> */}
         </div>
+        {user && 
+        <li>
+        <button className="btn btn-secondary ml-2 b-0" onClick={handleSignOut}>
+          <Link className="md:text-lg" to={"/register"}>
+            Logout
+          </Link>
+        </button>
+      </li>
+        }
       </div>
     </div>
   );
