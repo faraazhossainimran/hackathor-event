@@ -26,6 +26,7 @@ const Login = () => {
     googleSignIn()
     .then(result=> {
         toast.success('Login success')
+        navigate(location?.state ? location.state : "/")
     })
     .catch(error=> {
         toast.error('Something went wrong');
@@ -36,7 +37,6 @@ const Login = () => {
       <div className="hero">
         <div className="md:py-8">
           <h1 className="text-2xl md:text-5xl text-center my-8 font-bold">Login now!</h1>
-          <p>{user&& <span>user logged in</span>}</p>
           <div className="card md:w-[400px] shadow-2xl">
             <form onSubmit={handleSignIn} className="card-body">
               <div className="form-control">

@@ -38,11 +38,11 @@ const Register = () => {
   const handleSignUpWithGoogle = () => {
     googleSignIn()
       .then((result) => {
-        console.log(result.user);
-        console.log(result._tokenResponse.isNewUser);
+        toast.success('Account Created')
+        navigate(location?.state ? location.state : "/")
       })
       .catch((error) => {
-        console.log(error);
+        toast.success('Account Creation Failed')
       });
   };
   return (
@@ -130,7 +130,6 @@ const Register = () => {
           </div>
         </div>
       </div>
-      {user && <p>logged in</p>}
       <Toaster />
     </div>
   );
