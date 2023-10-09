@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 
 const NavBar = () => {
@@ -42,41 +42,42 @@ const NavBar = () => {
               className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               <li>
-                <Link to={"/prizes"}>Prizes</Link>
+                <NavLink to={"/prizes"}>Prizes</NavLink>
               </li>
               <li>
-                <Link to={"/about"}>About Us</Link>
+                <NavLink to={"/about"}>About Us</NavLink>
               </li>
               <li>
-                <Link to={"/hackathons"}>Hackathons</Link>
+                <NavLink to={"/hackathons"}> Hackathons</NavLink>
               </li>
             </ul>
           </div>
           <div className="">
-            <Link
-              className="text-md md:text-2xl font-bold"
+            <NavLink
+              className="flex"
               to={"/"}
             >
-              Hackathon Event
-            </Link>
+              <img className="w-[50px] mr-2" src={"https://i.ibb.co/MsjL0Qp/hackathon.png"}/>
+              <h1 className="text-md md:text-2xl font-bold mt-2 ">Hackathon Event</h1>
+            </NavLink>
           </div>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">
             <li>
-              <Link className="text-xl" to={"/prizes"}>
+              <NavLink className="text-xl hover:bg-white mx-2" to={"/prizes"}>
                 Prizes
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="text-xl" to={"/about"}>
+              <NavLink className="text-xl hover:bg-white mx-2" to={"/about"}>
                 About Us
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link className="text-xl" to={"/hackathons"}>
+              <NavLink className="text-xl hover:bg-white mx-2" to={"/hackathons"}>
                 Hackathons
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </div>
@@ -96,7 +97,7 @@ const NavBar = () => {
                         <img
                           className=""
                           src={
-                            user & user.photoURL ? user.photoURL : defaultImage
+                             user?.photoURL || defaultImage
                           }
                         />
                       </div>

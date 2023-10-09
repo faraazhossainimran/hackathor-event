@@ -17,7 +17,7 @@ const Banner = () => {
             <p className="mb-5">
            Hackathon event is a 12-hour beginner-friendly hackathon designed to be your first hackathon experience.
             </p>
-            <button className="btn btn-primary"><Link to={"/register"}>Get Started</Link></button>
+            {/* <button className="btn btn-primary"><Link to={"/register"}>Get Started</Link></button> */}
           </div>
         </div>
       </div>

@@ -17,6 +17,7 @@
         "id": 3,
         "image": "https://images.unsplash.com/photo-1552581234-26160f608093?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "title": "Workshops and Tutorials",
+        "price": 200,
         "description": "Expand your skill set with hands-on workshops and interactive tutorials. Our lineup of sessions covers a wide range of topics, from emerging technologies to design thinking and project management.",
         "details": "We offer a variety of workshops and tutorials on topics relevant to hackathon projects. These sessions are open to all participants and are a great way to expand your knowledge. Dive into deep learning, explore the Internet of Things, or sharpen your UI/UX design skills. Our experts will lead you through practical exercises and provide resources to apply what you've learned to your projects."
     },
@@ -24,6 +25,7 @@
         "id": 4,
         "image": "https://images.unsplash.com/photo-1519671282429-b44660ead0a7?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
         "title": "Food and Beverages",
+        "price": 45,
         "description": "Stay fueled and focused with complimentary meals, snacks, and a variety of beverages. We cater to diverse dietary preferences and ensure that you have the sustenance you need to keep your creativity flowing.",
         "details": "We provide breakfast, lunch, dinner, and snacks to keep you fueled throughout the event. Special dietary options are available upon request. Enjoy a diverse menu, from energizing breakfast burritos to gourmet dinner options. Hydration is important, so we offer a selection of beverages, including coffee, tea, and refreshing juices."
     },

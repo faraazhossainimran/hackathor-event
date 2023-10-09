@@ -1,8 +1,9 @@
-# React + Vite
+Website name: Hackathon Event 
+Live URL: https://hackathon-event-4483a.web.app/
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features on this website: 
+1. Users can log in to this site
+2. Users can create their account to this site.
+3. Users can log in or create account with google account
+4. Users can learn about Hackathon in Details
+5. Users can know about price and prize about Hackathon Event

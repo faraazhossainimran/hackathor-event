@@ -6,7 +6,6 @@ const Login = () => {
   const { user, signIn, googleSignIn } = useContext(AuthContext);
   const location = useLocation()
   const navigate = useNavigate()
-  console.log('location in the login page', location);
   const handleSignIn = (e) => {
     e.preventDefault()
     const form = new FormData(e.currentTarget)
@@ -15,8 +14,9 @@ const Login = () => {
     console.log(email, password);
     signIn(email,password)
     .then(result=> {
+        toast.success('Login success')
         navigate(location?.state ? location.state : "/")
-        return toast.success('Login success')
+        return 
     })
     .catch(error=>{
         return toast.error('Email or Password is wrong')
@@ -25,11 +25,10 @@ const Login = () => {
   const handleGoogleLogin = () => {
     googleSignIn()
     .then(result=> {
-        console.log(result.user);
-        console.log(result._tokenResponse.isNewUser);
+        toast.success('Login success')
     })
     .catch(error=> {
-        console.log(error);
+        toast.error('Something went wrong');
     })
   }
   return (

@@ -28,6 +28,7 @@ const ServiceDetailPage = ({ find }) => {
       <div className="container mx-auto my-8 md:my-24">
         <p className="mx-8 text-md md:text-2xl md:mx-32">{details}</p>
       </div>
+      
     </div>
   );
 };

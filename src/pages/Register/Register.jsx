@@ -1,13 +1,14 @@
 import { useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
 import toast, { Toaster } from "react-hot-toast";
 const Register = () => {
   const { user, signUp, googleSignIn, updateUser } = useContext(AuthContext);
-
+  const navigate = useNavigate()
+  const location = useLocation()
   const handleCreateAcount = (e) => {
     e.preventDefault();
-    const capitalLetter = "/[A-Z]/";
+    
     const form = new FormData(e.currentTarget);
     const name = form.get("name");
     const photo = form.get("photo");
@@ -16,21 +17,19 @@ const Register = () => {
     if(password.length < 6){
         return toast.error('Password should be at least 6 characters')
     }
-    // if(password !== capitalLetter){
+    // if(!capitalLetter.test(password)){
+        
     //     return toast.error('Password have at least a capital letter')
     // }
     console.log(name,photo);
     signUp(email, password)
     .then((result) => {
-      const user = result.user;
-      console.log("User object:", user);
+      console.log("User object:", result.user);
       toast.success("Success.");
-  
-      // After signing up, update the user's profile
-    return updateUser(user, name, photo)
-    })
-    .then(() => {
-      console.log("Profile update successful");
+        updateUser(name, photo)
+        .then(()=> {
+            navigate(location?.state ? location.state : "/")
+        })
     })
     .catch((error) => {
       console.log("Error during sign up or profile update:", error);

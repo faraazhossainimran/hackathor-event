@@ -1,11 +1,11 @@
 import { Link } from "react-router-dom";
 
 const ServiceCard = ({ aData }) => {
-  const { id, title, details, description, image } = aData;
+  const { id, title, description, image, price } = aData;
   //   console.log(aData);
   return (
     <div className="">
-      <Link to={`/service-details/${id}`}>
+      {/* <Link > */}
         <div className="card bg-base-100 shadow-xl">
           <figure>
             <img
@@ -18,13 +18,17 @@ const ServiceCard = ({ aData }) => {
             <p className="text-[19px]">
               {description} 
             </p>
-            <div className="card-actions justify-end">
-              {/* <button className="btn btn-primary">Buy Now</button> */}
-
+            <div className="card-actions">
+              <button className="btn">{price ? <p className="font-bold">Package Price: ${price}</p> : <p className="font-bold">Price: Free</p>}</button>
+              
+              <button className="btn btn-primary font-semibold"><Link to={`/service-details/${id}`}>See Details</Link></button>
             </div>
+            <div>
+       
+      </div>
           </div>
         </div>
-      </Link>
+      {/* </Link> */}
     </div>
   );
 };
