@@ -7,7 +7,7 @@ import { GoogleAuthProvider } from "firebase/auth";
 export const AuthContext = createContext()
 const AuthProviders = ({children}) => {
     const [user, setUser] = useState(null)
-    const[loading, setLoading] = useState(null)
+    const[loading, setLoading] = useState(true)
     const provider = new GoogleAuthProvider();
     const auth = getAuth(app)
     // signup with email, password
@@ -15,8 +15,10 @@ const AuthProviders = ({children}) => {
         setLoading(true)
        return createUserWithEmailAndPassword(auth, email,password)
     }
+
     // signin with email and password 
     const signIn = (email,password) => {
+        setLoading(true);
        return signInWithEmailAndPassword(auth, email, password)
     }
     // signin with google
@@ -26,6 +28,7 @@ const AuthProviders = ({children}) => {
     }
     // logout user 
     const logOut = () =>{
+        setLoading(true);
         return signOut(auth)
     }
     // profile info update and add
@@ -46,10 +49,19 @@ const AuthProviders = ({children}) => {
             return unsubscribe();
         }
     }, [])
-
+    // profile update
+    const updateUser = (user, name, photoUrl) => {
+        console.log('from authproviders', name, photoUrl);
+        return user?.updateProfile({
+          displayName: name,
+          photoURL: photoUrl
+        });
+      };
    const authInfo = {
     user,
+    loading,
     signUp,
+    updateUser,
     signIn,
     logOut,
     googleSignIn

@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
-
+import toast, { Toaster } from "react-hot-toast";
 const Login = () => {
   const { user, signIn, googleSignIn } = useContext(AuthContext);
   const handleSignIn = (e) => {
@@ -12,10 +12,10 @@ const Login = () => {
     console.log(email, password);
     signIn(email,password)
     .then(result=> {
-        console.log(result.user);
+        return toast.success('Login success')
     })
     .catch(error=>{
-        console.log(error);
+        return toast.error('Email or Password is wrong')
     })
   }
   const handleGoogleLogin = () => {
@@ -88,6 +88,7 @@ const Login = () => {
           </div>
         </div>
       </div>
+      <Toaster />
     </div>
   );
 };
