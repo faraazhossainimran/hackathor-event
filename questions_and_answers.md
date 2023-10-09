@@ -45,7 +45,7 @@ sum(1, "2");
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>My answer= A: `NaN` </i>
 
 </p>
 </details>
@@ -71,7 +71,7 @@ console.log(food);
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>B: `['🍝', '🍫', '🥑', '🍔']`</i>
 
 </p>
 </details>
@@ -96,7 +96,7 @@ console.log(sayHi());
 
 #### Answer: ?
 
-<i>Write your explanation here</i>
+<i>B: Hi there, undefined. <p>Sayhi is a funciton and it has one arguemnt called name but in the console.log we didn't pass any argument. that's why the name will be undifined.</p></i>
 
 </p>
 </details>
