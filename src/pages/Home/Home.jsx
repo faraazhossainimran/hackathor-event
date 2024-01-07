@@ -4,6 +4,7 @@ import Services from '../../components/Services/Services'
 import { useLoaderData } from 'react-router-dom'
 import Testimonials from '../../components/Testimonials/Testimonials'
 import Coundown from '../../components/Coundown/Coundown'
+import SignUpBanner from '../../components/SignUpBanner/SignUpBanner'
 
 const Home = () => {
     const data = useLoaderData()
@@ -13,6 +14,7 @@ const Home = () => {
             <Services data={data}></Services>
             <Coundown></Coundown>
             <Testimonials></Testimonials>
+            <SignUpBanner heading="SignUp to join an event"></SignUpBanner>
         </div>
     )
 }

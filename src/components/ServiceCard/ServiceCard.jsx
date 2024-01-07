@@ -14,8 +14,8 @@ const ServiceCard = ({ aData }) => {
             />
           </figure>
           <div className="card-body">
-            <h2 className="card-title">{title}</h2>
-            <p className="text-[19px]">
+            <h2 className="card-title text-2xl">{title}</h2>
+            <p className="text-[19px] pb-4">
               {description} 
             </p>
             <div className="card-actions">

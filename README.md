@@ -7,3 +7,6 @@ Features on this website:
 3. Users can log in or create account with google account
 4. Users can learn about Hackathon in Details
 5. Users can know about price and prize about Hackathon Event
+
+Tech Stack: 
+React.js, MongoDb, Firebase, HTML, CSS, Tailwind, Node.js
