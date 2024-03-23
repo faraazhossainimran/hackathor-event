@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import SignUpBanner from "../../components/SignUpBanner/SignUpBanner";
 
 const ServiceDetailPage = ({ find }) => {
   const { title,details, description, image  } = find;
@@ -27,6 +28,7 @@ const ServiceDetailPage = ({ find }) => {
       </div>
       <div className="container mx-auto my-8 md:my-24">
         <p className="mx-8 text-md md:text-2xl md:mx-32">{details}</p>
+        <SignUpBanner heading={"Participate on Event"}></SignUpBanner>
       </div>
       
     </div>
