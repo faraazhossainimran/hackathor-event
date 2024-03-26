@@ -5,7 +5,7 @@ const Invite = () => {
     return (
         <div>
         <div
-          className="hero rounded-2xl my-12"
+          className="hero rounded-2xl mt-12"
           style={{
             backgroundImage:
               "url(https://i.ibb.co/mtb5KvK/rahul-mishra-o4-Szx-Pg-Mw-V8-unsplash.jpg)",

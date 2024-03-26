@@ -7,6 +7,7 @@ import Coundown from '../../components/Coundown/Coundown'
 import SignUpBanner from '../../components/SignUpBanner/SignUpBanner'
 import Contact from '../../components/Contact/Contact'
 import Invite from '../../components/Invite/Invite'
+import Gallary from '../../components/Gallary/Gallary'
 
 const Home = () => {
     const data = useLoaderData()
@@ -18,6 +19,7 @@ const Home = () => {
             <Testimonials></Testimonials>
             {/* <div className='container mx-auto'> */}
             <Invite></Invite>
+            <Gallary></Gallary>
             <div className='container mx-auto'> 
             <SignUpBanner heading="SignUp to join an event"></SignUpBanner>
             </div>
