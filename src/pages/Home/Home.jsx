@@ -18,7 +18,7 @@ const Home = () => {
             <Coundown></Coundown>
             <Testimonials></Testimonials>
             {/* <div className='container mx-auto'> */}
-            <Invite></Invite>
+            {/* <Invite></Invite> */}
             <Gallary></Gallary>
             <div className='container mx-auto'> 
             <SignUpBanner heading="SignUp to join an event"></SignUpBanner>
