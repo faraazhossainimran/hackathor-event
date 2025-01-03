@@ -9,7 +9,7 @@ const Footer = () => {
             Hackathon Event <br />
             Providing reliable Hackathon Event experience since 2009
           </p>
-          <p>Copyright © 2023 - All right reserved</p>
+          <p>Copyright © 2025 - All right reserved</p>
         </aside>
       </footer>
     </div>
